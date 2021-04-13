@@ -1,0 +1,26 @@
+.welcome {
+    padding: 0 30px;
+    background-color: #F8CACA;
+    margin-top: 0;
+}
+
+.title {
+    margin-top: 0;
+    font-size: 80px;
+}
+
+.App-logo{
+    width: 200px;
+    height: 200px;
+}
+
+.formWelcome{
+    background-color: #FCEDF2;
+}
+
+.formWelcome input {
+    background-color: #C4CCF0;
+    font-family: 'Mali', cursive;
+    width: 300px;
+    margin: 10px 0;
+}

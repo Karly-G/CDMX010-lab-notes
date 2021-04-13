@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #F8CACA;
+    padding: 5px 30px;
+}
+
+.navbar img {
+    width: 50px;
+}
+
+.navbar h3 {
+    text-align: left;
+    font-size: 30px;
+}
+
+.navbar p {
+    font-size: 13px;
+    font-family: 'Mali', cursive;
+}
