@@ -1,0 +1,30 @@
+/* body{
+    background-color: #FCEDF2;
+} */
+
+.createNote {
+    padding: 0 30px;
+}
+
+.createNote h2{
+    margin-left: 0;
+}
+
+.createNote input,textarea{
+    background-color: #C4CCF0;
+    font-family: 'Mali', cursive;
+    width: 300px;
+    margin: 10px 0;
+}
+
+.textNote {
+    height: 80px;
+}
+
+.saveButton {
+    width: 100px;
+    height: 40px;
+    background-color: #F8CACA;
+    font-family: 'Mali', cursive;
+    border-radius: 50px;
+}
