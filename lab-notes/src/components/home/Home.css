@@ -100,3 +100,101 @@ a:visited {
     margin-bottom: 30px;
     background-image: url(https://www.flaticon.es/svg/vstatic/svg/145/145802.svg?token=exp=1618638530~hmac=2057579818526a21ebb9bb9c5f2f2408);
 }
+
+
+@media only screen and (max-width: 768px){
+
+.welcome{
+    margin: 25px;
+}
+
+.home{
+    margin-left: 5px;
+}
+
+.title {
+    margin-top: 0;
+    /* font-size: 50px; */
+}
+
+.App-logo{
+    width: 150px;
+    height: 150px;
+}
+
+.home h3{
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+    color: rgb(59, 56, 56);
+}
+
+.formLogin{
+    background-color: #F8CACA;
+    width: 400px;
+    text-align: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    font-family: 'Mali', cursive;
+    color: rgb(85, 83, 83);
+}
+
+.formLogin h2{
+    color: #81488C;
+}
+
+.formLogin input {
+    border: 2px solid #C4CCF0;
+    font-family: 'Mali', cursive;
+    width: 300px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.enter{
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    background: #919DD4;
+    border-radius: 63px;
+    font-family: 'Mali', cursive;
+    color: #FCEDF2;
+}
+
+.textForm{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.textLogin{
+    font-size: 18px;
+    margin: 15px 15px;
+}
+
+.formLogin li{
+    list-style: none;
+    font-size: 12px;
+}
+
+
+.gmail{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-image:url(https://www.flaticon.es/svg/vstatic/svg/355/355998.svg?token=exp=1618638448~hmac=161ac7f4a248aab2ecdae19b51900cc4);
+}
+
+.facebook{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    background-image: url(https://www.flaticon.es/svg/vstatic/svg/145/145802.svg?token=exp=1618638530~hmac=2057579818526a21ebb9bb9c5f2f2408);
+}
+
+
+
+}

@@ -5,7 +5,7 @@ import './firebase'
 import {Home} from './components/home/Home'
 import {Register} from './components/register/Register'
 import {Categories} from './components/categories/Categories';
-import { Notes } from './components/notes/Notes';
+import Notes from './components/notes/Notes';
 
 
 function App() {

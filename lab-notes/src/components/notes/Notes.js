@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './Notes.css';
 import { NoteForm } from '../noteForm/NoteForm';
+import swal from 'sweetalert';
+// import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 import favorite from '../../assets/favorite.png';
 import edit from '../../assets/edit.png';
@@ -9,7 +11,7 @@ import remove from '../../assets/remove.png';
 
 import {db} from '../../firebase'
 
-export const Notes = () =>{
+const Notes = () =>{
 
     const [notes,setNotes]= useState([]);
     const [modifyId, setModifyId]= useState('');
@@ -19,7 +21,7 @@ export const Notes = () =>{
             await db.collection('notes').doc().set(noteObject);
         }else{
             await db.collection('notes').doc(modifyId).update(noteObject);
-            alert('Nota editada exitosamente');
+            swal('Tu Nota','Ha sido editada exitosamente');
             setModifyId('');
         }
     };
@@ -27,7 +29,7 @@ export const Notes = () =>{
     const onDelete = async(id) =>{
         if(window.confirm('¿Estás segura de que quieres eliminar la nota?')){
             await db.collection('notes').doc(id).delete();
-            alert('Nota eliminada exitosamente');
+            swal('Nota eliminada exitosamente');
         }
     }
 
@@ -67,3 +69,15 @@ export const Notes = () =>{
         </div>
     )
 }
+
+export default Notes;
+
+
+// const Notes = () =>
+//         (
+//         <div>
+//             <p>Hola</p>
+//         </div>
+//         )
+
+// 

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import firebase from 'firebase/app';
 import {auth} from '../../firebase'
 import logoLN from '../../assets/logoR.png';
 import  '../register/Register.css';
@@ -10,6 +11,11 @@ export const Register = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [user, setUser] = useState('');
+
+    const handleNameUser = (name, value) =>{
+        setUser({...user, [name]: value});
+    };
 
     const navHistory = useHistory();
 
@@ -20,6 +26,19 @@ export const Register = () => {
             navHistory.push('/categories')
         })
     }
+
+    const googleSignIn = (e) => {
+        e.preventDefault(e);
+        const provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithRedirect(provider)
+            .then((result) => {
+                navHistory.push('/categories')
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        }
+    
 
     return (
         <div className="register">
@@ -34,12 +53,12 @@ export const Register = () => {
             <form className="formRegister" onSubmit={signUp}>
                 <h2>REGÍSTRATE</h2>
                 <h3>¡Qué emoción que te unas!</h3>
-                <input type="text" placeholder="Nombre/Apodo"/>
+                <input type="text" placeholder="Nombre/Apodo" onChange={(value) => handleNameUser("name", value)} />
                 <input type="email" placeholder="Correo electrónico" onChange={(e)=> {setEmail(e.target.value)}}/>
                 <input  type="password" placeholder="Contraseña" onChange={(e)=> {setPassword(e.target.value)}}/>
                 <button className="join">Unirme</button>
                 <h3 className="textLogin">o regístrate con</h3> 
-                <button className="gmail"></button>
+                <button className="gmail" onClick={googleSignIn}></button>
                 <button className="facebook"></button>
             </form>
     </div>
